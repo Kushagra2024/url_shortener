@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/styles/output.css">
+    <title>URL Shortener</title>
+</head>
+<body class="bg-slate-900 w-full h-screen p-6 flex flex-col items-center space-y-10">
+    <h1 class="text-5xl font-bold text-white">URL Shortener</h1>
+
+    <div class="w-1/2 ring-2 rounded-md flex flex-col px-10 py-4 bg-white space-y-6 items-center shadow-sm shadow-white">
+        <h1 class="text-gray-500 font-bold text-2xl">Enter the URL to be shortened</h1>
+
+        <form action="/shorturl" method="post" class="flex w-full">
+            <label for="fullURL" class="sr-only">Full Url</label>
+            <input type="text" name="fullURL" placeholder="https://example.com" class="py-3 px-2 border-none flex-grow bg-slate-200" id="urlInput">
+            <button type="submit" class="bg-blue-600 px-4 py-2 ml-1 rounded-sm border-none outline-none hover:bg-blue-700 active:scale-95 text-white font-medium tracking-wide" id="generateBtn">Generate</button>        
+        </form>
+
+        <p>This tool shortens the URL making it easy to share.</p>
+    </div>
+
+    <script src="/javascript/index.js"></script>
+    </body>
+</html>
